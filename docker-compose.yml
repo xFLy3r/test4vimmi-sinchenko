@@ -1,0 +1,24 @@
+# TODO configure routing when it will be added https://cli.vuejs.org/guide/deployment.html#routing-with-history-pushstate
+
+version: "3.1"
+services:
+
+  backend:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+    ports: 
+      - '3000:3000'
+
+  client:
+    build:
+      context: ./client
+    volumes:
+      - ./client:/app
+    environment:
+      - VITE_API_BASE_URL=http://localhost:3000
+    ports:
+      - '5173:5173'

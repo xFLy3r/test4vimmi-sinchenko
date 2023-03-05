@@ -1,0 +1,7 @@
+.git
+.vscode
+client
+node_modules
+Dockerfile
+.dockerignore
+dist
