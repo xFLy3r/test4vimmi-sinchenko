@@ -16,6 +16,10 @@ const router = createRouter({
       component: UserListView
     },
     {
+      path: '/users',
+      redirect: { name: 'users' },
+    },
+    {
       path: '/users/:id(\\d+)',
       name: 'user-details',
       component: () => import('../views/UserDetailsView.vue')

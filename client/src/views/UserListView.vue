@@ -13,14 +13,12 @@ export default {
   methods: {
     onSelectUser(id: number) {
       this.$router.push({ name: 'user-details', params: { id }});
-    }
+    },
   },
   beforeMount() {
     this.isLoading = true;
     UserService.getAll().then(({ users }) => {
       this.users = users;
-    }).catch(err => {
-      console.log(err);
     }).finally(_ => this.isLoading = false);
   },
   components: { UserListItem, InternalServerError }

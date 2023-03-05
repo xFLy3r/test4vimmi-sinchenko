@@ -14,11 +14,9 @@ export default {
     const { id } = this.$route.params;
  
     this.isLoading = true;
-    UserService.getById(Number(id))
-    .then(({ user }) => {
+    UserService.getById(Number(id)).then(({ user }) => {
       this.user = user;
-    })
-    .catch(err => {
+    }).catch(err => {
       if (err?.response.status === 404) {
         this.$router.push({ 
           name: 'not-found',   
@@ -27,8 +25,7 @@ export default {
         });
       } 
       return err;
-    })
-    .finally(() => { this.isLoading = false });
+    }).finally(() => { this.isLoading = false });
   },
   components: { UserDetails, InternalServerError }
 }

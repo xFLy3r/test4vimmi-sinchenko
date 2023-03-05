@@ -10,4 +10,5 @@ export default class UserService {
   static getById(id: number): Promise<({ user: User })> {
     return axios.get(`/users/${id}`).then(({ data }) => data);
   }
+
 }

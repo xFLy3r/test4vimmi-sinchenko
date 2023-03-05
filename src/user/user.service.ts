@@ -28,21 +28,21 @@ export class UserService {
         'Random user',
         'random.u@gmail.com',
         'Barselona',
-        'Random user',
+        'Description for random user',
       ),
       new User(
         7,
         'Random user',
         'random.u@gmail.com',
         'Barselona',
-        'Random user!',
+        'Description 2',
       ),
       new User(
         8,
         'Random user',
         'random.u@gmail.com',
         'Barselona',
-        'Random user!',
+        'Descripion 1',
       ),
     ];
   }
